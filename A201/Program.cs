@@ -17,9 +17,33 @@ namespace A201
             {
                 if (character == 'X')
                 {
+                    for (int i = 0; i < continentNum; i++)
+                    {
+                        if (infected == true)
+                        {
+                            newMap += 1;
+                        }
+                        else
+                        {
+                            newMap += 0;
+                        }
+                    }
 
+                    newMap += 'X';
+                    continentNum = 0;
+                    infected = false;
+                }
+                else
+                {
+                    if (character == '1')
+                    {
+                        infected = true;
+                    }
+                    continentNum++;
                 }
             }
+
+            return newMap;
         }
         
         static void Main(string[] args)
@@ -44,7 +68,7 @@ namespace A201
                     continue;
                 }
             }
-            double percent = (infected / population) * 100;
+            int percent = 100 * infected / population;
             Console.WriteLine("Final Map: " + FinalMap(map));
             Console.WriteLine("Total population: " + population);
             Console.WriteLine("Number infected: " + infected);
