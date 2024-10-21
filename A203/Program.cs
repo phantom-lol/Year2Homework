@@ -42,15 +42,6 @@ namespace A203
         {
             int[] a = { 2, 6, 14, 24, 39, 57, 63, 88 };
 
-            //if (binarySearch(a, 63) == true)
-            //{
-            //    Console.WriteLine("found");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("not found");
-            //}
-
             if (binarySearch(a, 65) == true)
             {
                 Console.WriteLine("found");
