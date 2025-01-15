@@ -16,6 +16,7 @@ namespace A215
                 if (word[i] == word[i + 1])
                 {
                     index = i + 1;
+                    break;
                 }
             }
 
@@ -31,8 +32,8 @@ namespace A215
         
         static void Main(string[] args)
         {
-            Console.WriteLine("noodle");
-            Console.WriteLine(BPCCDoorperson("noodle"));
+            Console.WriteLine("help");
+            Console.WriteLine(BPCCDoorperson("help"));
             Console.WriteLine("llamas");
             Console.WriteLine(BPCCDoorperson("llamas"));
             Console.ReadKey();
