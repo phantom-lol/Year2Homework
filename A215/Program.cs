@@ -8,9 +8,34 @@ namespace A215
 {
     internal class Program
     {
+        static int BPCCDoorperson(string word)
+        {
+            int index = 0;
+            for (int i = 0; i < word.Length - 1; i++)
+            {
+                if (word[i] == word[i + 1])
+                {
+                    index = i + 1;
+                }
+            }
+
+            if (index > 0)
+            {
+                return index * 3;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        
         static void Main(string[] args)
         {
-
+            Console.WriteLine("noodle");
+            Console.WriteLine(BPCCDoorperson("noodle"));
+            Console.WriteLine("llamas");
+            Console.WriteLine(BPCCDoorperson("llamas"));
+            Console.ReadKey();
         }
     }
 }
