@@ -29,7 +29,7 @@ namespace A216
                     result += target.Trim(',', '.', '?', '!') + " ";
                 }
             }
-            return result.Trim(); 
+            return result.Trim();
         }
 
         static List<int> GetWordLengths(string sentence)
