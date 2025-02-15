@@ -1,6 +1,6 @@
 # hello
 
-all of the year 2 homework practical question solutions from bp (because im sigma like that)
+my solutions to the year 2 homework questions fr. there are like 2 of them im proud of the rest suck
 > cool quote
 
 also go look at my [bio](https://guns.lol/phabnatom)
