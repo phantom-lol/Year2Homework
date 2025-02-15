@@ -10,3 +10,5 @@ also go look at my [bio](https://guns.lol/phabnatom)
 ## MISSING ASSIGNMENTS
 - A206 -> working on NEA so no practical was included in homework
 - A207 -> same as A206
+- A217 -> NEA final deadline was like the week after lol
+- A128 -> CAP4 week after too DUDE
