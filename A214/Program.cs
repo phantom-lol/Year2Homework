@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,6 +40,7 @@ namespace A214
 
             }
         } 
+            nums.Add((int)input[input.Length - 1]);
         
         static bool attacked(int[] attackers, int[] defenders)
         {
@@ -56,6 +59,7 @@ namespace A214
                     result = calculateWinner(attackers[i], defenders[i]);
                 }
             }
+
             return result;
         }
         
