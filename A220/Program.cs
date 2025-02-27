@@ -19,7 +19,7 @@ namespace A220
                 int totalSyllablesInLine = 0;
                 while (!validLine)
                 {
-                    line1.Add(words[])
+                    
                 }
             }
         }
