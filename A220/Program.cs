@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,19 +10,6 @@ namespace A220
 {
     internal class Program
     {
-        static bool CheckTotal(int index, int target)
-        {
-            int totalSyllables = 0;
-            foreach (string word in line)
-            {
-                Console.WriteLine(word);
-                Console.ReadKey();
-                char[] letters = word.ToCharArray();
-                totalSyllables += int.Parse(letters[0].ToString());
-            }
-
-            return totalSyllables == target;
-        }
         
         static void HaikuGenerator(string[,] words)
         {
@@ -34,24 +22,31 @@ namespace A220
                 {
                     bool validLine = false;
                     string[] line = new string[3];
+                    int totalSyllables = 0;
                     while (!validLine)
                     {
                         if (i == 1)
                         {
-                            line[i] = words[rnd.Next(1, 8), rnd.Next(1, 10)];
-                            validLine = CheckTotal(line, 7);
+                            int syllables = rnd.Next(1, 8);
+                            int wordIndex = rnd.Next(1, 10);
+                            line[i] = words[syllables, wordIndex];
+                            totalSyllables += syllables;
+                            validLine = totalSyllables <= 7;
                         }
                         else
                         {
                             int syllables = rnd.Next(1, 6);
                             int wordIndex = rnd.Next(1, 10);
                             line[i] = words[syllables, wordIndex];
-                            validLine = CheckTotal(line, 5);
+                            totalSyllables += syllables;
+                            validLine = totalSyllables <= 5;
                         }
                     }
                     result.Add(line);
                 }
+                validHaiku = HaikuChecker(words, result);
             }
+            
             PrintHaiku(result);
         }
 
@@ -68,12 +63,9 @@ namespace A220
             Console.ReadKey();
         }
 
-        static bool HaikuChecker(string[,] words, string[] line1, string[] line2, string[] line3)
+        static bool HaikuChecker(string[,] words, List<Array> list)
         {
-            List<Array> list = new List<Array>();
-            list.Add(line1); list.Add(line2); list.Add(line3);
             List<int> syllables = new List<int>();
-
             for (int i = 0; i < list.Count; i++)
             {
                 int totalSyllables = 0;
