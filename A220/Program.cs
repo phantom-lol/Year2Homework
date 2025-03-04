@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,10 +12,7 @@ namespace A220
     {
         static bool HaikuChecker(string[,] words, string[] line1, string[] line2, string[] line3)
         {
-            List<Array> list = new List<Array>();
-            list.Add(line1); list.Add(line2); list.Add(line3);
             List<int> syllables = new List<int>();
-
             for (int i = 0; i < list.Count; i++)
             {
                 int totalSyllables = 0;
