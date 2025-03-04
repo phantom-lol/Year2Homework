@@ -9,65 +9,6 @@ namespace A220
 {
     internal class Program
     {
-        static bool CheckTotal(int index, int target)
-        {
-            int totalSyllables = 0;
-            foreach (string word in line)
-            {
-                Console.WriteLine(word);
-                Console.ReadKey();
-                char[] letters = word.ToCharArray();
-                totalSyllables += int.Parse(letters[0].ToString());
-            }
-
-            return totalSyllables == target;
-        }
-        
-        static void HaikuGenerator(string[,] words)
-        {
-            Random rnd = new Random();
-            bool validHaiku = false;
-            List<Array> result = new List<Array>();
-            while (!validHaiku)
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    bool validLine = false;
-                    string[] line = new string[3];
-                    while (!validLine)
-                    {
-                        if (i == 1)
-                        {
-                            line[i] = words[rnd.Next(1, 8), rnd.Next(1, 10)];
-                            validLine = CheckTotal(line, 7);
-                        }
-                        else
-                        {
-                            int syllables = rnd.Next(1, 6);
-                            int wordIndex = rnd.Next(1, 10);
-                            line[i] = words[syllables, wordIndex];
-                            validLine = CheckTotal(line, 5);
-                        }
-                    }
-                    result.Add(line);
-                }
-            }
-            PrintHaiku(result);
-        }
-
-        static void PrintHaiku(List<Array> result)
-        {
-            for (int i = 0; i < result.Count; i++)
-            {
-                Array array = result[i];
-                foreach (string word in array)
-                {
-                    Console.WriteLine(word);
-                }
-            }
-            Console.ReadKey();
-        }
-
         static bool HaikuChecker(string[,] words, string[] line1, string[] line2, string[] line3)
         {
             List<Array> list = new List<Array>();
