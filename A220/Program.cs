@@ -39,7 +39,10 @@ namespace A220
             {"extraterrestrial", "onomatopoeia", "responsibility", "revolutionary", "generalisation", "enthusiastically", "biodiversity", "veterinarian", "characteristically"},
             {"oversimplification", "individuality", "decriminalisation", "compartmentalisation", "anaesthesiologist", "industrialisation", "buckminsterfullerene", "irresponsibility", "autobiographical"}};
 
-            HaikuGenerator(words);
+            string[] line1 = { "16", "47" };
+            string[] line2 = { "37", "43" };
+            string[] line3 = { "19", "25" };
+            HaikuChecker(words, line1, line2 , line3);
             Console.ReadKey();
         }
     }
