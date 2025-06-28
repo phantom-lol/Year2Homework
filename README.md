@@ -14,7 +14,7 @@ also go look at my [bio](https://guns.lol/phabnatom)
 - A218 -> CAP4 week after too DUDE
 
 ## TIMES
-### some of the questions asked for timer to be used soooo here are my times
+some of the questions asked for timer to be used soooo here are my times
 - A202 -> 8:47
 - A203 -> 5:47
 - A208 -> 6:45
@@ -26,3 +26,6 @@ also go look at my [bio](https://guns.lol/phabnatom)
 - A219 -> 12:15
 - A223 -> 11:21
 - A224 -> Question 1: 4:49, Question 2 -> 8:19
+
+# complete
+year 2 is over now so yk this is the last i will be updating this repo. been fun and i hope i can look back on this code and say how awful it is when im the best coder in the world or something !!
